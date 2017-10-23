@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+body {
+	/*font-family: 'Arial (Hebrew)', Arial;*/ /* not working if using font family in the body */
+	  dir: rtl;
+	  text-align: right;
+	  background: #fff url(../images/header_bg.png) repeat-x center top;
+}
+header {
+	width: 900px;
+	height: 106px;
+	margin: auto;
+	background-image: url("../images/header_bg.png");
+	background-repeat: repeat-x;
+
+	position: relative;
+}
+header a.logo {
+    display: block;
+    width: 142px;
+    height: 93px;
+    position: absolute;
+    bottom: -20px;
+    right: 70px;
+    background: url(../images/paz_logo.png) no-repeat 0 0;
+}
+.search {
+	position: absolute;
+    top: 20px;
+    width: 132px;
+    background: url(../images/search_input.png) no-repeat 0 0;
+}
+.search a {
+    display: inline-block;
+    float: left;
+    width: 19px;
+    height: 19px;
+    background: url(../images/search_button.png) no-repeat 0 0;
+}
+.search input[type="text"] {
+    width: 110px;
+    background: transparent;
+    border: 0 none;
+}
+
+.menu {
+	z-index: 999; /* prevent dropdown list appear behind the images bellow */
+	margin: auto;
+	width: 900px;
+	position: absolute;
+	bottom: 0;
+	
+	/* technique to put the menu in center, even if margin: auto */
+	left: 0;
+	right: 0;
+
+}
+.menu > ul {
+	list-style: none;
+	text-align: left;
+}
+.menu > ul > li {
+  display: inline;
+}
+.menu > ul > li > a {
+	text-decoration: none;
+	padding-bottom: 10px;
+	display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+	font-family: 'Arial (Hebrew)', Arial;
+}
+.menu > ul > li > a:hover {
+	color: #2112A2;
+}
+
+li.menuitem-separator {
+	background-image: url("../images/menu_sep.png");
+	background-repeat: repeat-x;
+	margin: 0px 5px;
+}
+.dropdown-menu {
+	position: relative;
+}
+
+.dropdown-content {
+	display: none;
+	border: 1px solid black;
+	background-image: url("../images/menu_dropdown_bg.png");
+	background-repeat: repeat-x;
+	background-color: #909090;
+	list-style: none;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	width: 100%; /* did not work */
+	width: 140px;
+}
+.dropdown-menu:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content li > a {
+	text-decoration: none;
+	padding: 10px;
+	display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+	font-family: 'Arial (Hebrew)', Arial;
+}
+
+.dropdown-content li:hover {
+	background-color: #bcbcbc;
+}
+.dropdown-content li > a:hover {
+	color: #2112A2;
+}
+	
+.dropdown-content li.menuitem-separator {
+	background-image: url("../images/menu_dropdown_bg.png");
+	background-repeat: repeat-x;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 1px;
+}
+
+.dropdown-menu a.home {
+	width: 17px; 
+	height: auto;
+	background: url(../images/menu_home.png) no-repeat 0 top;
+}
+main {
+	width: 900px;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	overflow: hidden /* fixing the problem the main does not have height */
+}
+
+main .services {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	overflow: hidden /* fixing the problem the main does not have height */
+}
+main .services,.row {
+	overflow: hidden /* fixing the problem the main does not have height */
+}
+main .services .row .col {
+	position: relative;
+	display: inline;
+    width: 293px;
+    height: 216px;
+	padding: 0 24px;
+    float: left;
+	background: url(../images/small_cube_bg.png) no-repeat 0 0;
+}
+main .services .row .col .moreinfo {
+	margin-top: 20px;
+	overflow: hidden /* fixing the problem the main does not have height */
+}
+main .services .row .col .moreinfo a {
+	float: left;
+    color: #72716d;
+	font-size: 13px;
+    text-decoration: underline;
+	font-family: 'Arial (Hebrew)', Arial;
+}
+main .services .row .col .moreinfo .arrow {
+	float: left;
+	display: inline-block;
+	margin: 5px;
+}
+main .services .row .col .locations {
+	margin-top: 60px;
+}
+main .services .row .col .locations a {
+    color: #72716d;
+	font-size: 13px;
+    text-decoration: underline;
+	font-family: 'Arial (Hebrew)', Arial;
+}
+main .services .row .col .map {
+	float: left;
+	display: inline-block;
+	margin: 5px;
+}
+
+main .services .row .col h3 {
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-weight: bold;
+	font-family: 'Arial (Hebrew)', Arial;
+}
+main .departments,.row {
+	overflow: hidden /* fixing the problem the main does not have height */
+}
+main .departments .row .col {
+	position: relative;
+	display: inline;
+    width: 293px;
+    height: 355px;
+    float: left;
+}
+main .departments .row .col .cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+main .departments .row .col .desc {
+    width: 228px;
+    height: 77px;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    right: 25px;
+    bottom: 6px;
+    color: #fff;
+    background: url(../images/hp_tab_text_bg.png) no-repeat 0 0;
+    font-size: 14px;
+    font-weight: bold;
+	font-family: 'Arial (Hebrew)', Arial;
+}
+main .departments .row .col.spacer {
+	margin: 0 10px
+}
+footer {
+	width: 100%;
+	height: 38px;
+	margin: auto;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-image: url("../images/footer_bg.png");
+	background-repeat: repeat-x;
+}
+footer .links {
+	width: 900px;
+	margin: auto;
+	height: 100%;
+	margin-top: 12px;
+	color: #fff;
+}
+footer .links a {
+	color: #fff;
+	font-family: 'Arial (Hebrew)', Arial;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+footer .links a:hover {
+	color: #2112A2;
+}
